@@ -21,4 +21,19 @@ TEST(word_list, load_and_check_words)
   ASSERT_FALSE(ok);
 }
 
+TEST(word_list, find_all_words)
+{
+  word_list wlist;
+  bool ok = wlist.load("word_list.txt");
+  ASSERT_TRUE(ok);
+
+  auto words = wlist.find_all_words_in("abcde");
+  for (auto& w : words)
+  {
+    std::cout << w << " ";
+  }
+  std::cout << std::endl;
+//  ASSERT_EQ(words.size(), 2); 
+}
+
 

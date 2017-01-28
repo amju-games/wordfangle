@@ -3,6 +3,7 @@
 // J Colman 2017
 // -----------------------------------------------------------------------------
 
+#include <numeric>
 #include "board.h"
 #include "log.h"
 #include "wf_assert.h"
@@ -141,11 +142,21 @@ void board::print() const
     msg m;
     for (const tile& t : r)
     {
-      m << t.letter << " ";
+      m << (t.letter == WF_BLANK_LETTER ? "." : t.letter) << " ";
     }
     log(m);
   }
 }
 
+std::string board::collect_all_letters() const
+{
+  std::string res = std::accumulate(
+    m_tiles.begin(), 
+    m_tiles.end(), 
+    std::string(),
+    [](const std::string& s, const tile_row& r) { return s + concat_letters(r); }
+  );
+  return res;
+}
 
 

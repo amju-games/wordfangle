@@ -133,10 +133,13 @@ TEST(board, clear_row)
   int BOARD_H = 3;
   mock_board b;
   b.init(BOARD_W, BOARD_H);
-  std::cout << "\nBefore:\n";
-  b.print();
 
   tile_row r_before = b.get_row(0);
+  for (const auto& t : r_before)
+  {
+    ASSERT_NE(t.letter, WF_BLANK_LETTER);
+  }
+
   b.clear_row(0);
   tile_row r_after = b.get_row(0);
   for (const auto& t : r_after)
@@ -145,5 +148,23 @@ TEST(board, clear_row)
   }
 }
 
+TEST(board, collect_all_letters)
+{
+  int BOARD_W = 9;
+  int BOARD_H = 5;
+  mock_board b;
+  b.init(BOARD_W, BOARD_H);
+  
+  std::string letters = b.collect_all_letters();
+  ASSERT_EQ(letters.size(), BOARD_W * BOARD_H);
+  std::cout << "All letters in board: " << letters << "\n";
+  b.print();
+
+  b.clear_row(0);
+  letters = b.collect_all_letters();
+  ASSERT_EQ(letters.size(), BOARD_W * (BOARD_H - 1));
+  std::cout << "After clearing row 0: " << letters << "\n";
+  b.print();
+}
 
 

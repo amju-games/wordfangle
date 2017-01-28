@@ -20,6 +20,8 @@ public:
 
   bool is_a_word(const std::string& word) const;
 
+  std::vector<std::string> find_all_words_in(const std::string& s) const;
+
 private:
   std::vector<std::string> m_words;
 };

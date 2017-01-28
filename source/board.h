@@ -31,7 +31,11 @@ public:
   void rotate_col_up(int r);
   void rotate_col_down(int r);
 
+  // Creates blanks in all tiles in row r.
   void clear_row(int r);
+
+  // Concat all letters on board, excluding blanks (created by clear_row()).
+  std::string collect_all_letters() const;
 
   void print() const;
  

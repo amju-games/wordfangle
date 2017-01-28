@@ -41,7 +41,30 @@ bool word_list::load(const std::string& filename)
 bool word_list::is_a_word(const std::string& word) const
 {
   bool b = std::binary_search(m_words.begin(), m_words.end(), word);
+#ifdef WORD_LIST_LOG
   log(msg() << "Word '" << word << "' " << (b ? "" : "NOT") << " found");
+#endif
   return b;
+}
+
+std::vector<std::string> word_list::find_all_words_in(const std::string& cs) const
+{
+  std::vector<std::string> res;
+  for (int i = 2; i < cs.size(); i++)
+  {
+    std::string s(cs.substr(0, i + 1));
+    std::sort(s.begin(), s.end());
+    do
+    {
+      bool b = is_a_word(s);
+      log(msg() << "Word '" << s << "' " << (b ? "" : "NOT") << " found");
+      if (b)
+      {
+        res.push_back(s);
+      }
+    }
+    while (std::next_permutation(s.begin(), s.end()));
+  }
+  return res;
 }
 

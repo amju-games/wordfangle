@@ -22,7 +22,7 @@ struct tile
   bool operator==(const tile& other) const { return letter == other.letter; }
 };
 
-#define WF_BLANK_LETTER "."
+#define WF_BLANK_LETTER ""
 
 using tile_row = std::deque<tile>;
 
