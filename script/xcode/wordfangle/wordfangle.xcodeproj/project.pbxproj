@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6952AE7D1E3D080E009DC596 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6952AE7C1E3D080E009DC596 /* main.m */; };
+		6952AE801E3D080E009DC596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6952AE7F1E3D080E009DC596 /* AppDelegate.m */; };
+		6952AE821E3D080E009DC596 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 6952AE811E3D080E009DC596 /* Shader.fsh */; };
+		6952AE841E3D080E009DC596 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 6952AE831E3D080E009DC596 /* Shader.vsh */; };
+		6952AE871E3D080E009DC596 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6952AE861E3D080E009DC596 /* GameViewController.m */; };
+		6952AE8A1E3D080E009DC596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6952AE881E3D080E009DC596 /* Main.storyboard */; };
+		6952AE8C1E3D080E009DC596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6952AE8B1E3D080E009DC596 /* Assets.xcassets */; };
+		6952AE8F1E3D080E009DC596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6952AE8D1E3D080E009DC596 /* LaunchScreen.storyboard */; };
+		6952AE9A1E3D080E009DC596 /* wordfangleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6952AE991E3D080E009DC596 /* wordfangleTests.m */; };
+		6952AEA51E3D080E009DC596 /* wordfangleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6952AEA41E3D080E009DC596 /* wordfangleUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6952AE961E3D080E009DC596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6952AE701E3D080E009DC596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6952AE771E3D080E009DC596;
+			remoteInfo = wordfangle;
+		};
+		6952AEA11E3D080E009DC596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6952AE701E3D080E009DC596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6952AE771E3D080E009DC596;
+			remoteInfo = wordfangle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6952AE781E3D080E009DC596 /* wordfangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordfangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6952AE7C1E3D080E009DC596 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6952AE7E1E3D080E009DC596 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6952AE7F1E3D080E009DC596 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6952AE811E3D080E009DC596 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		6952AE831E3D080E009DC596 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		6952AE851E3D080E009DC596 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		6952AE861E3D080E009DC596 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		6952AE891E3D080E009DC596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6952AE8B1E3D080E009DC596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6952AE8E1E3D080E009DC596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6952AE901E3D080E009DC596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6952AE951E3D080E009DC596 /* wordfangleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordfangleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6952AE991E3D080E009DC596 /* wordfangleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wordfangleTests.m; sourceTree = "<group>"; };
+		6952AE9B1E3D080E009DC596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6952AEA01E3D080E009DC596 /* wordfangleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordfangleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6952AEA41E3D080E009DC596 /* wordfangleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wordfangleUITests.m; sourceTree = "<group>"; };
+		6952AEA61E3D080E009DC596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6952AE751E3D080E009DC596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6952AE921E3D080E009DC596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6952AE9D1E3D080E009DC596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6952AE6F1E3D080E009DC596 = {
+			isa = PBXGroup;
+			children = (
+				6952AE7A1E3D080E009DC596 /* wordfangle */,
+				6952AE981E3D080E009DC596 /* wordfangleTests */,
+				6952AEA31E3D080E009DC596 /* wordfangleUITests */,
+				6952AE791E3D080E009DC596 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6952AE791E3D080E009DC596 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6952AE781E3D080E009DC596 /* wordfangle.app */,
+				6952AE951E3D080E009DC596 /* wordfangleTests.xctest */,
+				6952AEA01E3D080E009DC596 /* wordfangleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6952AE7A1E3D080E009DC596 /* wordfangle */ = {
+			isa = PBXGroup;
+			children = (
+				6952AE7E1E3D080E009DC596 /* AppDelegate.h */,
+				6952AE7F1E3D080E009DC596 /* AppDelegate.m */,
+				6952AE811E3D080E009DC596 /* Shader.fsh */,
+				6952AE831E3D080E009DC596 /* Shader.vsh */,
+				6952AE851E3D080E009DC596 /* GameViewController.h */,
+				6952AE861E3D080E009DC596 /* GameViewController.m */,
+				6952AE881E3D080E009DC596 /* Main.storyboard */,
+				6952AE8B1E3D080E009DC596 /* Assets.xcassets */,
+				6952AE8D1E3D080E009DC596 /* LaunchScreen.storyboard */,
+				6952AE901E3D080E009DC596 /* Info.plist */,
+				6952AE7B1E3D080E009DC596 /* Supporting Files */,
+			);
+			path = wordfangle;
+			sourceTree = "<group>";
+		};
+		6952AE7B1E3D080E009DC596 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6952AE7C1E3D080E009DC596 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6952AE981E3D080E009DC596 /* wordfangleTests */ = {
+			isa = PBXGroup;
+			children = (
+				6952AE991E3D080E009DC596 /* wordfangleTests.m */,
+				6952AE9B1E3D080E009DC596 /* Info.plist */,
+			);
+			path = wordfangleTests;
+			sourceTree = "<group>";
+		};
+		6952AEA31E3D080E009DC596 /* wordfangleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6952AEA41E3D080E009DC596 /* wordfangleUITests.m */,
+				6952AEA61E3D080E009DC596 /* Info.plist */,
+			);
+			path = wordfangleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6952AE771E3D080E009DC596 /* wordfangle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6952AEA91E3D080F009DC596 /* Build configuration list for PBXNativeTarget "wordfangle" */;
+			buildPhases = (
+				6952AE741E3D080E009DC596 /* Sources */,
+				6952AE751E3D080E009DC596 /* Frameworks */,
+				6952AE761E3D080E009DC596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wordfangle;
+			productName = wordfangle;
+			productReference = 6952AE781E3D080E009DC596 /* wordfangle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6952AE941E3D080E009DC596 /* wordfangleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6952AEAC1E3D080F009DC596 /* Build configuration list for PBXNativeTarget "wordfangleTests" */;
+			buildPhases = (
+				6952AE911E3D080E009DC596 /* Sources */,
+				6952AE921E3D080E009DC596 /* Frameworks */,
+				6952AE931E3D080E009DC596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6952AE971E3D080E009DC596 /* PBXTargetDependency */,
+			);
+			name = wordfangleTests;
+			productName = wordfangleTests;
+			productReference = 6952AE951E3D080E009DC596 /* wordfangleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6952AE9F1E3D080E009DC596 /* wordfangleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6952AEAF1E3D080F009DC596 /* Build configuration list for PBXNativeTarget "wordfangleUITests" */;
+			buildPhases = (
+				6952AE9C1E3D080E009DC596 /* Sources */,
+				6952AE9D1E3D080E009DC596 /* Frameworks */,
+				6952AE9E1E3D080E009DC596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6952AEA21E3D080E009DC596 /* PBXTargetDependency */,
+			);
+			name = wordfangleUITests;
+			productName = wordfangleUITests;
+			productReference = 6952AEA01E3D080E009DC596 /* wordfangleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6952AE701E3D080E009DC596 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Amju;
+				TargetAttributes = {
+					6952AE771E3D080E009DC596 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					6952AE941E3D080E009DC596 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6952AE771E3D080E009DC596;
+					};
+					6952AE9F1E3D080E009DC596 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6952AE771E3D080E009DC596;
+					};
+				};
+			};
+			buildConfigurationList = 6952AE731E3D080E009DC596 /* Build configuration list for PBXProject "wordfangle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6952AE6F1E3D080E009DC596;
+			productRefGroup = 6952AE791E3D080E009DC596 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6952AE771E3D080E009DC596 /* wordfangle */,
+				6952AE941E3D080E009DC596 /* wordfangleTests */,
+				6952AE9F1E3D080E009DC596 /* wordfangleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6952AE761E3D080E009DC596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6952AE8A1E3D080E009DC596 /* Main.storyboard in Resources */,
+				6952AE841E3D080E009DC596 /* Shader.vsh in Resources */,
+				6952AE8C1E3D080E009DC596 /* Assets.xcassets in Resources */,
+				6952AE8F1E3D080E009DC596 /* LaunchScreen.storyboard in Resources */,
+				6952AE821E3D080E009DC596 /* Shader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6952AE931E3D080E009DC596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6952AE9E1E3D080E009DC596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6952AE741E3D080E009DC596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6952AE801E3D080E009DC596 /* AppDelegate.m in Sources */,
+				6952AE871E3D080E009DC596 /* GameViewController.m in Sources */,
+				6952AE7D1E3D080E009DC596 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6952AE911E3D080E009DC596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6952AE9A1E3D080E009DC596 /* wordfangleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6952AE9C1E3D080E009DC596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6952AEA51E3D080E009DC596 /* wordfangleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6952AE971E3D080E009DC596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6952AE771E3D080E009DC596 /* wordfangle */;
+			targetProxy = 6952AE961E3D080E009DC596 /* PBXContainerItemProxy */;
+		};
+		6952AEA21E3D080E009DC596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6952AE771E3D080E009DC596 /* wordfangle */;
+			targetProxy = 6952AEA11E3D080E009DC596 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6952AE881E3D080E009DC596 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6952AE891E3D080E009DC596 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6952AE8D1E3D080E009DC596 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6952AE8E1E3D080E009DC596 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6952AEA71E3D080F009DC596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6952AEA81E3D080F009DC596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6952AEAA1E3D080F009DC596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wordfangle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amju.wordfangle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6952AEAB1E3D080F009DC596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wordfangle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amju.wordfangle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6952AEAD1E3D080F009DC596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = wordfangleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amju.wordfangleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wordfangle.app/wordfangle";
+			};
+			name = Debug;
+		};
+		6952AEAE1E3D080F009DC596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = wordfangleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amju.wordfangleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wordfangle.app/wordfangle";
+			};
+			name = Release;
+		};
+		6952AEB01E3D080F009DC596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = wordfangleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amju.wordfangleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = wordfangle;
+			};
+			name = Debug;
+		};
+		6952AEB11E3D080F009DC596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = wordfangleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amju.wordfangleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = wordfangle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6952AE731E3D080E009DC596 /* Build configuration list for PBXProject "wordfangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6952AEA71E3D080F009DC596 /* Debug */,
+				6952AEA81E3D080F009DC596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6952AEA91E3D080F009DC596 /* Build configuration list for PBXNativeTarget "wordfangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6952AEAA1E3D080F009DC596 /* Debug */,
+				6952AEAB1E3D080F009DC596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6952AEAC1E3D080F009DC596 /* Build configuration list for PBXNativeTarget "wordfangleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6952AEAD1E3D080F009DC596 /* Debug */,
+				6952AEAE1E3D080F009DC596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6952AEAF1E3D080F009DC596 /* Build configuration list for PBXNativeTarget "wordfangleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6952AEB01E3D080F009DC596 /* Debug */,
+				6952AEB11E3D080F009DC596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6952AE701E3D080E009DC596 /* Project object */;
+}
