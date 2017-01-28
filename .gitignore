@@ -1,3 +1,4 @@
 *.o
 wordfangle_tests
 wordfangle_cli
+wordfangle_glut
