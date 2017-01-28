@@ -23,9 +23,11 @@ LDFLAGS=../thirdparty/googletest/make/gtest.a -framework OpenGL -framework GLUT
 
 SOURCES=test_main.cpp \
 board_tests.cpp \
+word_list_tests.cpp \
 ../board.cpp \
 ../log.cpp \
-../tile.cpp
+../tile.cpp \
+../word_list.cpp
 
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=wordfangle_tests
