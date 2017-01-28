@@ -23,7 +23,15 @@ void board::init(int w, int h)
 
 std::string board::get_random_letter()
 {
-  return "a";
+  // TODO Create set of letters (once, up front) which allow you to make
+  //  a bunch of words. 
+
+  static int s_i = 0;
+  int i = s_i % 26;
+  s_i++;
+  std::stringstream ss;
+  ss << char(i + 'a');
+  return ss.str();
 }
 
 int board::get_w() const
