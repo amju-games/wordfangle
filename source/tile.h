@@ -22,6 +22,10 @@ struct tile
   bool operator==(const tile& other) const { return letter == other.letter; }
 };
 
+#define WF_BLANK_LETTER "."
+
 using tile_row = std::deque<tile>;
 
+// Get the word formed by a tile_row
+std::string concat_letters(const tile_row&);
 
