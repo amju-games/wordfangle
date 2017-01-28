@@ -31,6 +31,7 @@ public:
   void rotate_col_up(int r);
   void rotate_col_down(int r);
 
+  void clear_row(int r);
 
   void print() const;
  

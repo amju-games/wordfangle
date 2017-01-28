@@ -120,6 +120,19 @@ void board::rotate_col_down(int c)
   }
   m_tiles[0][c] = t;
 }
+  
+void board::clear_row(int r)
+{
+  wf_assert(!m_tiles.empty());
+  wf_assert(r >= 0);
+  wf_assert(r < m_tiles.size());
+  
+  tile_row& row = m_tiles[r];
+  for (tile& t : row)
+  {
+    t.letter = WF_BLANK_LETTER;
+  }
+}
 
 void board::print() const
 {

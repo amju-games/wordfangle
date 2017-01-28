@@ -127,5 +127,23 @@ TEST(board, rotate_col_down)
   } 
 }
 
+TEST(board, clear_row)
+{
+  int BOARD_W = 3;
+  int BOARD_H = 3;
+  mock_board b;
+  b.init(BOARD_W, BOARD_H);
+  std::cout << "\nBefore:\n";
+  b.print();
+
+  tile_row r_before = b.get_row(0);
+  b.clear_row(0);
+  tile_row r_after = b.get_row(0);
+  for (const auto& t : r_after)
+  {
+    ASSERT_EQ(t.letter, WF_BLANK_LETTER);
+  }
+}
+
 
 
