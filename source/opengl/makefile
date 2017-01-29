@@ -14,7 +14,8 @@ WARNINGS=-Wall -Wno-deprecated-declarations
 INCLUDES=\
   -I.. \
   -I../macosx \
-  -I../opengl
+  -I../opengl \
+  -I../thirdparty/lodepng
 
 CFLAGS=-c $(WARNINGS) $(INCLUDES) -std=c++11   -DMACOSX
 
@@ -27,8 +28,12 @@ SOURCES=glut_main.cpp \
 ../word_list.cpp \
 ../opengl/gl_shader.cpp \
 ../opengl/gl_system.cpp \
+../opengl/load_png.cpp \
+../opengl/texture.cpp \
+../opengl/resource_manager.cpp \
 ../opengl/grid.cpp \
-../opengl/rect.cpp
+../opengl/rect.cpp \
+../thirdparty/lodepng/lodepng.cpp
 
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=wordfangle_glut

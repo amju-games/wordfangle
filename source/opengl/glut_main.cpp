@@ -16,6 +16,7 @@
 #include "gl_system.h"
 #include "grid.h"
 #include "rect.h"
+#include "texture.h"
 
 static int WIN_X = 320;
 static int WIN_Y = 480;
@@ -40,7 +41,15 @@ void draw()
   //  glBindTexture(GL_TEXTURE_2D, m_tex[1]);
   //  glEnable(GL_TEXTURE_2D);
 
+  glEnable(GL_SCISSOR_TEST);
+  glScissor(g.x - g.gap, 480 - (g.y + g.total_h() - g.gap), g.total_w(), g.total_h());
+
+  rect r(0, 0, 320, 480);
+  //r.draw();
+
   g.draw();
+  glDisable(GL_SCISSOR_TEST);
+
   mouse_rect.draw();
 }
 
@@ -109,6 +118,15 @@ int main(int argc, char** argv)
   glutDisplayFunc(display);
   glutMouseFunc(mouse_button);
   glutMotionFunc(mouse_move);
+
+  texture tex;
+  tex.load("letters1.png");
+  tex.upload_on_gl_thread();
+  tex.use_on_gl_thread();
+
+  glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+  glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
   glutMainLoop();
   return 0;
 } 

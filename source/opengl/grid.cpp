@@ -9,13 +9,17 @@
 #include "rect.h"
 
   void grid::draw()
-  { 
+  {
     rect ghost;
     for (int i = 0; i < h; i++)
     { 
       for (int j = 0; j < w; j++)
       { 
         rect r(x + j * (tile_size + gap), y + i * (tile_size + gap), tile_size, tile_size); 
+        r.u0 = 0;
+        r.u1 = 1.f / 27.f + r.u0;
+        r.v0 = 1.f;
+        r.v1 = 0.f;
         if (dragging)
         {
           if (i == select_row && dragging_row)
@@ -52,7 +56,7 @@
 
         }
         
-        r.col = colour(1, 1, 0.2, 1);
+//        r.col = colour(1, 1, 0.2, 1);
 /*      
         if (   r.x       < mouse_x 
             && r.x + r.w > mouse_x 

@@ -26,6 +26,9 @@ struct grid
 
   grid(int w_, int h_) : w(w_), h(h_) {}
 
+  int total_w() const { return w * (tile_size + gap) + gap; }
+  int total_h() const { return h * (tile_size + gap) + gap; }
+
   void draw();
 
   void set_mouse(int x, int y);

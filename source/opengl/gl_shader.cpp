@@ -4,7 +4,7 @@
 
 #include <fstream>
 #include <iostream>
-#include "wf_assert.h"
+#include "boiler_assert.h"
 #include "gl_includes.h"
 #include "gl_shader.h"
 #include "log.h"
@@ -13,8 +13,20 @@ gl_shader::~gl_shader()
 {
   if (m_compiled_ok)
   {
-    wf_assert(m_destroy_called);
+    gl_boiler_assert(m_destroy_called);
   }
+}
+
+void gl_shader::set_mat4_on_gl_thread(const std::string& name, const mat4& m)
+{
+  GL_CHECK(GLint loc = glGetUniformLocation(m_program_id, name.c_str()));
+  if (loc == -1)
+  {
+    log(msg() << m_frag_shader_filename << ": no uniform: " << name);
+    return;
+  }
+
+  GL_CHECK(glUniformMatrix4fv(loc, 1, false, m.data()));
 }
 
 void gl_shader::set_float_on_gl_thread(const std::string& name, float f)
@@ -113,7 +125,7 @@ void gl_shader::upload_on_gl_thread()
   {
     GL_CHECK(glGetShaderInfoLog(vertSh, ERROR_BUF_SIZE, 0, buf));
     log(msg() << m_vert_shader_filename << ": " << buf);
-    wf_stop;
+    gl_boiler_stop;
   }
 
   GL_CHECK(glCompileShader(fragSh));
@@ -123,7 +135,7 @@ void gl_shader::upload_on_gl_thread()
   {
     GL_CHECK(glGetShaderInfoLog(fragSh, ERROR_BUF_SIZE, 0, buf));
     log(msg() << m_frag_shader_filename << ": " << buf);
-    wf_stop;
+    gl_boiler_stop;
   }
 
   GL_CHECK(m_program_id = glCreateProgram());
@@ -136,7 +148,7 @@ void gl_shader::upload_on_gl_thread()
   {
     GL_CHECK(glGetProgramInfoLog(m_program_id, ERROR_BUF_SIZE, 0, buf));
     log(buf);
-    wf_stop;
+    gl_boiler_stop;
   }
   m_compiled_ok = true;
 
@@ -145,7 +157,7 @@ void gl_shader::upload_on_gl_thread()
 
 void gl_shader::use_on_gl_thread()
 {
-  wf_assert(m_compiled_ok);
+  gl_boiler_assert(m_compiled_ok);
   GL_CHECK(glUseProgram(m_program_id));
 }
 

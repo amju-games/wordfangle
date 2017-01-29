@@ -4,12 +4,17 @@
 
 #pragma once
 
-#include "gl_includes.h"
+class resource
+{
+public:
+  virtual ~resource() {}
+};
 
-void check_gl_error(const char* statement, const char* filename, int line);
-
-#define GL_CHECK(statement) \
-  statement; check_gl_error(#statement, __FILE__, __LINE__); 
-
-void log_gl_info();
+class gl_resource : public resource
+{
+public:
+  virtual void upload_on_gl_thread() = 0;
+  virtual void use_on_gl_thread() = 0;
+  virtual void destroy_on_gl_thread() = 0;
+};
 
